@@ -26,14 +26,14 @@ namespace MercadoPagoExamenCertificacion.Api
         {
             var strBody = new System.IO.StreamReader(Request.Body).ReadToEnd();
             var path = Path.Combine(_env.WebRootPath, "files", "notify.txt");
-            var objfile = new FileInfo(path);
-            if (objfile.Exists)
-            {
-                objfile.Delete();
-            }
-            objfile = null;
+            //var objfile = new FileInfo(path);
+            //if (objfile.Exists)
+            //{
+            //    objfile.Delete();
+            //}
+            //objfile = null;
 
-            using (StreamWriter objwrt = new StreamWriter(path))
+            using (StreamWriter objwrt = new StreamWriter(path,true))
             {
                 objwrt.Write(strBody);
             }
