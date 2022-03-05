@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MercadoPagoExamenCertificacion.Models;
 
 namespace MercadoPagoExamenCertificacion
 {
@@ -31,7 +32,8 @@ namespace MercadoPagoExamenCertificacion
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            // get Config values
+            services.Configure<MercadoPagoSiteConfig>(Configuration.GetSection("MercadoPagoSiteConfig"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

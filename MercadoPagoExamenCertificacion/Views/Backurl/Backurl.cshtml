@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Backurl";
+}
+@model MercadoPagoExamenCertificacion.Models.BackurlResponse
+
+<h1>BackUrl Response</h1>
+
+<style> 
+    dt{
+        font-weight:bold;
+        text-decoration:underline;
+    }
+    dd{
+        font-style:italic;
+    }
+</style>
+
+<div style="margin-left:30px">
+    <h4>@Html.DisplayFor(model=>model.strPage)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strCollectionId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strCollectionId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strCollectionStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strCollectionStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strExternalReference)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strExternalReference)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strPaymentType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strPaymentType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strPreferenceId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strPreferenceId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strSiteId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strSiteId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strProcesssingMode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strProcesssingMode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.strMerchantAccountId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.strMerchantAccountId)
+        </dd>
+    </dl>
+</div>
