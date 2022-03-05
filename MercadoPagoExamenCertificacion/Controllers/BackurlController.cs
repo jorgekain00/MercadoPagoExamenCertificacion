@@ -42,6 +42,14 @@ namespace MercadoPagoExamenCertificacion.Controllers
                 {
                     objBR.strCollectionStatus = objQS["collection_status"].ToString();
                 }
+                if (!string.IsNullOrEmpty(objQS["payment_id"]))
+                {
+                    objBR.strPaymentId = objQS["payment_id"].ToString();
+                }
+                if (!string.IsNullOrEmpty(objQS["status"]))
+                {
+                    objBR.strStatus = objQS["status"].ToString();
+                }
                 if (!string.IsNullOrEmpty(objQS["external_reference"]))
                 {
                     objBR.strExternalReference = objQS["external_reference"].ToString();
@@ -53,6 +61,10 @@ namespace MercadoPagoExamenCertificacion.Controllers
                 if (!string.IsNullOrEmpty(objQS["payment_type"]))
                 {
                     objBR.strPaymentType = objQS["payment_type"].ToString();
+                }
+                if (!string.IsNullOrEmpty(objQS["merchant_order_id"]))
+                {
+                    objBR.strMerchantOrderId = objQS["merchant_order_id"].ToString();
                 }
                 if (!string.IsNullOrEmpty(objQS["preference_id"]))
                 {
