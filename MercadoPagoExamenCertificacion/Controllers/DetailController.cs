@@ -76,24 +76,24 @@ namespace MercadoPagoExamenCertificacion.Controllers
                 Pending = $"{_mercadoPagoSiteConfig.Value.Domain}{_mercadoPagoSiteConfig.Value.PendingURL}"
             };
             objRequest.AutoReturn = "approved";
-            objRequest.PaymentMethods = new PreferencePaymentMethodsRequest()
-            {
-                ExcludedPaymentMethods = new List<PreferencePaymentMethodRequest>()
-                    {
-                        new PreferencePaymentMethodRequest()
-                        {
-                            Id = "amex"
-                        }
-                    },
-                ExcludedPaymentTypes = new List<PreferencePaymentTypeRequest>()
-                    {
-                        new PreferencePaymentTypeRequest()
-                        {
-                            Id = "atm"
-                        }
-                    },
-                Installments = 6
-            };
+            //objRequest.PaymentMethods = new PreferencePaymentMethodsRequest()
+            //{
+            //    ExcludedPaymentMethods = new List<PreferencePaymentMethodRequest>()
+            //        {
+            //            new PreferencePaymentMethodRequest()
+            //            {
+            //                Id = "amex"
+            //            }
+            //        },
+            //    ExcludedPaymentTypes = new List<PreferencePaymentTypeRequest>()
+            //        {
+            //            new PreferencePaymentTypeRequest()
+            //            {
+            //                Id = "atm"
+            //            }
+            //        },
+            //    Installments = 6
+            //};
             objRequest.NotificationUrl = $"{_mercadoPagoSiteConfig.Value.Domain}{_mercadoPagoSiteConfig.Value.NotificationUrl}";
             objRequest.StatementDescriptor = "Certificación Mercado Pago";
             objRequest.ExternalReference = _mercadoPagoSiteConfig.Value.Email;
