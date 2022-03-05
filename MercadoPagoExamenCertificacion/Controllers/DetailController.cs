@@ -43,7 +43,7 @@ namespace MercadoPagoExamenCertificacion.Controllers
                     {
                         Id = "1234",
                         Title = objOC.strProducto,
-                        Description= "Dispositivo móvil de Tienda e-commerce",
+                        Description= "Dispositivo móvil de Tienda e-commerce",
                         Quantity = objOC.intUnidades,
                         CurrencyId = "MXN",
                         UnitPrice = objOC.decPrice,
